@@ -112,13 +112,13 @@ fun main(args: Array<String>) {
     }
     events.addListener(PlayerSpawnEvent::class.java) {
         it.player.addEffect(Potion(PotionEffect.INVISIBILITY, 1, 9999, Potion.ICON_FLAG))
-        it.player.setResourcePack(ResourcePack.forced("https://download.mc-packs.net/pack/d5a7a2778f76017a56be04473991e1a696af532a.zip",
-            "d5a7a2778f76017a56be04473991e1a696af532a", Component.text("Accept pwetty please")))
+        it.player.setResourcePack(ResourcePack.forced("https://download.mc-packs.net/pack/ca62f3487e892d9babe36cf597c7929fc4b60596.zip",
+            "ca62f3487e892d9babe36cf597c7929fc4b60596", Component.text("Accept pwetty please")))
         it.player.setAutoViewEntities(false)
         it.player.isAutoViewable = false
-        val ui = Inventory(InventoryType.CHEST_6_ROW, Component.text("\u2700        \u2701").color(NamedTextColor.WHITE))
+        val ui = Inventory(InventoryType.CHEST_6_ROW, Component.text("\u2704\u2702\u2703\u2700        \u2701").color(NamedTextColor.WHITE))
         pinv[it.player] = ui
-        val player = it.player;
+        val player = it.player
         player.sendMessage(Component.text("Welcome, ").color(NamedTextColor.GREEN)
             .append(player.name.color(NamedTextColor.GREEN).decorate(TextDecoration.BOLD)))
         MinecraftServer.getSchedulerManager().submitTask {
